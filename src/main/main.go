@@ -1,9 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"GoTest/src/new"
+)
 
 func main() {
 	test()
+	new.U2()
 }
 
 func test() {
