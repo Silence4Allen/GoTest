@@ -7,7 +7,8 @@ import (
 const LIM = 2700
 
 var fibs [LIM]uint64
-func TestFibonacci() {
+
+func TestFibo() {
 	f := fibo()
 	for i := 0; i < 10; i++ {
 		fmt.Printf("i = %d\n", i)
