@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"time"
+	"GoTest/src/demo"
 )
 
 func main() {
@@ -15,15 +16,6 @@ func main() {
 }
 
 func test() {
-	s := "hello"
-	c := []byte(s)
-	c[0] = 'j'
-	for i, j := range s {
-		fmt.Printf("i = %d , j = %c\n", i, j)
-	}
-
-	for i, j := range string(c) {
-		fmt.Printf("i = %d , j = %c\n", i, j)
-	}
-
+	demo.TestMap()
 }
+
