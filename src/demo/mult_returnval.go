@@ -3,7 +3,7 @@ package demo
 import "fmt"
 
 //编写一个函数，接收两个整数，然后返回它们的和、积与差。编写两个版本，一个是非命名返回值，一个是命名返回值。
-func MultTest() {
+func TestMult() {
 	m := 5
 	n := 4
 	show(getResult(m, n))

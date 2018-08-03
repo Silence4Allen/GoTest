@@ -7,7 +7,7 @@ import (
 )
 
 //编写一个名字为 MySqrt 的函数，计算一个 float64 类型浮点数的平方根，如果参数是一个负数的话将返回一个错误。编写两个版本，一个是非命名返回值，一个是命名返回值。
-func ErrorTest() {
+func TestError() {
 	fmt.Print("First example with -1: ")
 	ret1, err1 := mysqrt(-1)
 	if err1 != nil {

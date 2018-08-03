@@ -1,7 +1,7 @@
 package demo
 import "fmt"
 
-func VarTest() {
+func TestVar() {
 	x := min(1, 3, 2, 0)
 	fmt.Printf("The minimum is: %d\n", x)
 	slice := []int{7, 9, 3, 5, 1}
