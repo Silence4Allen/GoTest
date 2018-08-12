@@ -67,3 +67,25 @@ func fibo3() {
 		}
 	}
 }
+
+func TestFibo4() {
+	result := 0
+	n := 0
+	for i := 0; i <= 10; i++ {
+		n, result = fibo4(i)
+		fmt.Printf("fibonacci(%d) is: %d\n", n, result)
+	}
+
+}
+
+func fibo4(i int) (n, res int) {
+	n = i
+	if n <= 1 {
+		res = 1;
+	} else {
+		_, res1 := fibo4(n - 1)
+		_, res2 := fibo4(n - 2)
+		res = res1 + res2
+	}
+	return n, res
+}
