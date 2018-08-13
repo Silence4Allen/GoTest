@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"time"
+	"GoTest/src/question"
 )
 
 func main() {
@@ -15,26 +16,11 @@ func main() {
 }
 
 func test() {
-	reboot := aa{
-		"reboot",
-		21,
-	}
-
-	people := aa{
-		"allen",
-		33,
-	}
-
-	fmt.Println(reboot)
-	fmt.Println(people)
-	changeAge(&reboot)
-	fmt.Println(reboot)
-}
-func changeAge(a *aa) {
-	a.age = 100
+	question.PrintLongestSubstringWithoutRepeatingCharactersResult("hdlajljfdal")
+	question.PrintLongestSubstringWithoutRepeatingCharactersResult("d")
+	question.PrintLongestSubstringWithoutRepeatingCharactersResult("")
+	question.PrintLongestSubstringWithoutRepeatingCharactersResult("abcdefghijklmn")
+	question.PrintLongestSubstringWithoutRepeatingCharactersResult("Process finished with exit cod")
 }
 
-type aa struct {
-	name string
-	age  int
-}
+
