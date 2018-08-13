@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"time"
-	"GoTest/src/demo"
 )
 
 func main() {
@@ -15,8 +14,27 @@ func main() {
 
 }
 
-var values = [5]int{10, 11, 12, 13, 14}
-
 func test() {
-	demo.TestFibo4()
+	reboot := aa{
+		"reboot",
+		21,
+	}
+
+	people := aa{
+		"allen",
+		33,
+	}
+
+	fmt.Println(reboot)
+	fmt.Println(people)
+	changeAge(&reboot)
+	fmt.Println(reboot)
+}
+func changeAge(a *aa) {
+	a.age = 100
+}
+
+type aa struct {
+	name string
+	age  int
 }
