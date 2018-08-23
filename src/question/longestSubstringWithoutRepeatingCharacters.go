@@ -2,11 +2,14 @@ package question
 
 import "fmt"
 
+/**
+给定一个字符串，找出不含有重复字符的最长子串的长度。
+ */
 func LongestSubstringWithoutRepeatingCharacters(s string) (int, string) {
-	m := make(map[byte]int)
+	m := make(map[rune]int)
 	start := 0
 	maxLength := 0
-	for i, ch := range []byte(s) {
+	for i, ch := range []rune(s) {
 		if lastI, ok := m[ch]; ok && lastI >= start {
 			start = lastI + 1
 		}

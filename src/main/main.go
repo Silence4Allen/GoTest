@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"time"
-	"GoTest/src/question"
 )
 
 func main() {
@@ -16,11 +15,6 @@ func main() {
 }
 
 func test() {
-	question.PrintLongestSubstringWithoutRepeatingCharactersResult("hdlajljfdal")
-	question.PrintLongestSubstringWithoutRepeatingCharactersResult("d")
-	question.PrintLongestSubstringWithoutRepeatingCharactersResult("")
-	question.PrintLongestSubstringWithoutRepeatingCharactersResult("abcdefghijklmn")
-	question.PrintLongestSubstringWithoutRepeatingCharactersResult("Process finished with exit cod")
-}
 
+}
 
