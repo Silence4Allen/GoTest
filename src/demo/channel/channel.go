@@ -13,7 +13,7 @@ func worker(id int, c chan int) {
 func createWorker(id int) chan<- int {
 	c := make(chan int)
 	go worker(id, c)
-	return c
+return c
 }
 func chanDemo() {
 	var channels [10]chan<- int
