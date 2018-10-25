@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"time"
+	"fmt"
 )
 
 func main() {
@@ -11,10 +11,8 @@ func main() {
 	end := time.Now()
 	a := end.Sub(start)
 	fmt.Printf("\nIt takes %v to run this program.\n", a)
-
 }
 
 func test() {
 
 }
-
