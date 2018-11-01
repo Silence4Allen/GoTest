@@ -14,5 +14,9 @@ func main() {
 }
 
 func test() {
+	var s = "hello"
+	bytes := []byte(s)
+	fmt.Println(bytes)
+	fmt.Println(string(bytes))
 
 }

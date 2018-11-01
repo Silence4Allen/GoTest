@@ -8,6 +8,8 @@ import (
 	"github.com/pkg/errors"
 )
 
+/*对外是提供一个out chan
+供外部传数据过来进行展示*/
 func ItemSaver(index string) (chan engine.Item, error) {
 
 	client, err := elastic.NewClient(elastic.SetSniff(false))
@@ -23,7 +25,7 @@ func ItemSaver(index string) (chan engine.Item, error) {
 			log.Printf("Item Saver : got item #%d: %v", itemCount, item)
 			itemCount++
 
-			err := Save(client, index, item)
+			err := save(client, index, item)
 			if err != nil {
 				log.Printf("Item Saver: error saving item %v: %v", item, err)
 			}
@@ -33,7 +35,7 @@ func ItemSaver(index string) (chan engine.Item, error) {
 	return out, nil
 }
 
-func Save(client *elastic.Client, index string, item engine.Item) (err error) {
+func save(client *elastic.Client, index string, item engine.Item) (err error) {
 
 	if item.Type == "" {
 		return errors.New("Must supply Type")

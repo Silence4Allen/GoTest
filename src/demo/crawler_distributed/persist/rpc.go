@@ -12,7 +12,7 @@ type ItemSaverService struct {
 }
 
 func (s *ItemSaverService) Save(item engine.Item, result *string) error {
-	err := persist.Save(s.Client, s.Index, item)
+	err := persist.save(s.Client, s.Index, item)
 	if err == nil {
 		*result = "ok"
 	}
